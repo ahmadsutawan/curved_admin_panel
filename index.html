@@ -1,0 +1,486 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<meta http-equiv="X-UA-Compatible" content="IE=edge">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href='https://unpkg.com/boxicons@2.0.9/css/boxicons.min.css' rel='stylesheet'>
+	<link rel="stylesheet" href="assets/css/jquery.dataTables.min.css">
+	<link rel="stylesheet" href="assets/css/datatables.css">
+	<link rel="stylesheet" href="assets/css/style.css">
+	<title>Admin Dashboard Curved</title>
+</head>
+<body>
+
+	<!-- SIDEBAR -->
+	<section id="sidebar">
+		<div class="brand">
+			<img src="assets/img/undraw/lighthouse.png" alt="">
+			<span class="text">Admin</span>
+		</div>
+		<ul class="side-menu">
+			<li class="divider" data-text="main">Main</li>
+			<li class="active">
+				<a href="#">
+					<i class='bx bxs-dashboard icon' ></i> 
+					<span>Dashboard</span>
+				</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-chart icon' ></i> 
+					<span>Charts</span>
+				</a>
+			</li>
+			<li>
+				<a href="#"><i class='bx bxs-widget icon' ></i> Widgets</a>
+			</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-notepad icon' ></i> 
+					<span>Forms</span> 
+					<i class='bx bx-chevron-right icon-right' ></i>
+				</a>
+				<ul class="side-dropdown">
+					<li><a href="#">Basic</a></li>
+					<li><a href="#">Select</a></li>
+					<li><a href="#">Checkbox</a></li>
+					<li><a href="#">Radio</a></li>
+				</ul>
+			</li>
+			<li class="divider" data-text="Report">Report</li>
+			<li>
+				<a href="#">
+					<i class='bx bxs-report icon'></i>
+					<span class="text">Daily Report</span>
+				</a>
+			</li>
+			
+
+			<!-- profile -->
+			<li class="profile">
+				<div class="profile-details">
+					<div class="profile-content">
+						<img src="assets/img/users/profile.png" alt="profileImg">
+					</div>
+					<div class="name-job">
+						<div class="name">John Doe</div>
+						<div class="job">Administrator</div>
+					</div>
+					<a href="register.html">
+						<i class='bx bx-log-out'></i>
+					</a>
+				</div>
+			</li>
+		</ul>
+	</section>
+	<!-- SIDEBAR -->
+
+
+	<!-- CONTENT -->
+	<section id="content">
+		<!-- NAVBAR -->
+		<nav>
+			<!-- <i class='bx bx-menu' ></i> -->
+			<i class='bx bx-menu-alt-left toggle-sidebar'></i>
+			<div class="nav-link">Menu</div>
+			<form action="#">
+				<div class="form-input">
+					<input type="search" id="search" placeholder="Search...">
+					<button type="submit" class="search-btn"><i class='bx bx-search' ></i></button>
+				</div>
+			</form>
+			<div class="notif">
+				<div class="nav-link">
+					<i class='bx bxs-bell icon' ></i>
+					<span class="badge">3</span>
+				</div>
+				<ul class="notif-link">
+					<li><a href="#"><i class='bx bxs-message-square-dots' ></i> New Message</a></li>
+					<li><a href="#"><i class='bx bxs-message-square-dots' ></i> New Message</a></li>
+					<li><a href="#"><i class='bx bxs-message-square-dots' ></i> New Message</a></li>
+					<li><a href="#" class="show-all"> Show All</a></li>
+				</ul>
+			</div>
+
+			<!-- theme light/dark -->
+			<i class='bx bx-moon change-theme' title="theme" id="theme-button"></i>
+		</nav>
+		<!-- NAVBAR -->
+
+		<!-- MAIN -->
+		<main>
+			<div class="head-title">
+				<div class="left">
+					<h1>Dashboard</h1>
+					<ul class="breadcrumb">
+						<li>
+							<a href="#">Dashboard</a>
+						</li>
+						<li><i class='bx bx-chevron-right' ></i></li>
+						<li>
+							<a class="active" href="#">Home</a>
+						</li>
+					</ul>
+				</div>
+				<a href="#" class="btn-download">
+					<i class='bx bxs-cloud-download' ></i>
+					<span class="text">Download PDF</span>
+				</a>
+			</div>
+
+			<ul class="box-info">
+				<li>
+					<a href="">
+						<i class='bx bxs-calendar-check info'></i>
+						<span class="text">
+							<h3>1020</h3>
+							<p>New Order</p>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class='bx bxs-cart success'></i>
+						<span class="text">
+							<h3>2543</h3>
+							<p>Cart</p>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class='bx bxs-group warning'></i>
+						<span class="text">
+							<h3>2834</h3>
+							<p>Visitors</p>
+						</span>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<i class='bx bxs-dollar-circle danger'></i>
+						<span class="text">
+							<h3>$2543</h3>
+							<p>Total Sales</p>
+						</span>
+					</a>
+				</li>
+			</ul>
+
+			<div class="alert show alert-info">
+				<span class="icon info">
+					<i class='bx bx-info-circle icon'></i>
+				</span>
+				<div class="text info">
+					<span>Info</span>
+					<p>Process Done.</p>
+				</div>
+				<button class="close info">
+					<i class='bx bxs-x-circle' ></i>
+				</button>
+			</div>
+
+			<!-- <div class="alert show alert-success">
+				<span class="icon success">
+					<i class='bx bx-check-circle icon'></i>
+				</span>
+				<div class="text success">
+					<span>Success</span>
+					<p>Successfully Approved.</p>
+				</div>
+				<button class="close success">
+					<i class='bx bxs-x-circle' ></i>
+				</button>
+			</div> -->
+			
+			<!-- <div class="alert show alert-warning">
+				<span class="icon warning">
+					<i class='bx bx-x-circle icon'></i>
+				</span>
+				<div class="text warning">
+					<span>Warning!</span>
+					<p>Data is not valid!!</p>
+				</div>
+				<button class="close warning">
+					<i class='bx bxs-x-circle' ></i>
+				</button>
+			</div> -->
+
+			<!-- <div class="alert show alert-danger">
+				<span class="icon danger">
+					<i class='bx bx-error-circle'></i>
+				</span>
+				<div class="text danger">
+					<span>Error!</span>
+					<p>Successfully Rejected</p>
+				</div>
+				<button class="close danger">
+					<i class='bx bxs-x-circle' ></i>
+				</button>
+			</div> -->
+
+			<div class="card">
+				<div class="content-data">
+					<div class="head">
+						<h3>Sales Report</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<div class="chart">
+						<div id="chart"></div>
+					</div>
+				</div>
+				
+				<div class="content-data">
+					<div class="head">
+						<h3>Todos</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<ul class="todo-list">
+						<li class="info">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="success">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="warning">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+						<li class="danger">
+							<p>Todo List</p>
+							<i class='bx bx-dots-vertical-rounded'></i>
+						</li>
+					</ul>
+				</div>
+			</div>
+
+			<div class="card">
+				<div class="content-data">
+					<div class="head">
+						<h3>Table Data</h3>
+						<div class="menu">
+							<i class='bx bx-dots-horizontal-rounded icon'></i>
+							<ul class="menu-link">
+								<li><a href="#">Edit</a></li>
+								<li><a href="#">Save</a></li>
+								<li><a href="#">Remove</a></li>
+							</ul>
+						</div>
+					</div>
+					<div id="formContent">
+						<table class="display nowrap" id="data-table">
+							<thead>
+								<tr>
+									<th>Photo</th>
+									<th>Name</th>
+									<th>Status</th>
+									<th>Action</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>
+										<img src="assets/img/logo/html5.png">
+									</td>
+									<td>html5</td>
+									<td>
+										<span class="status danger">Danger</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="assets/img/logo/css3.png">
+									</td>
+									<td>css3</td>
+									<td>
+										<span class="status info">Info</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="assets/img/logo/JavaScript.png">
+									</td>
+									<td>JavaScript</td>
+									<td>
+										<span class="status warning">Warning</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="assets/img/logo/php8.png">
+									</td>
+									<td>php8</td>
+									<td>
+										<span class="status info">Info</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="assets/img/logo/laravel.png">
+									</td>
+									<td>laravel</td>
+									<td>
+										<span class="status danger">Danger</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+								<tr>
+									<td>
+										<img src="assets/img/logo/nodejs.png">
+									</td>
+									<td>nodejs</td>
+									<td>
+										<span class="status success">Success</span>
+									</td>
+									<td>
+										<button class="modal-open action warning" data-modal="modal-edit">
+											<i class='bx bx-edit-alt'></i>
+										</button>
+										<button class="modal-open action danger" data-modal="modal-delete">
+											<i class='bx bx-trash-alt'></i>
+										</button>
+									</td>
+								</tr>
+							</tbody>
+						</table>
+
+						<button class="modal-open action info" data-modal="modal-add"><i class='bx bx-plus-circle'></i> | Add</button>
+						<!-- modal -->
+						<div class="modal" id="modal-add">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2>Modal Add</h2>
+									<span class="modal-close"><i class='bx bxs-x-circle'></i></span>
+								</div>
+								<div class="modal-body">
+									<form action="">
+										<div class="input">
+											<span>Name</span>
+											<input type="text" name="" placeholder="Input your name" autocomplete="off">
+										</div>
+										<div class="input">
+											<span>Email</span>
+											<input type="text" name="" placeholder="example@mail.com" autocomplete="off">
+										</div>
+										<div class="input">
+											<label>Picture</label>
+											<input type="file" name="">
+										</div>
+									</form>
+								</div>
+								<button class="action info"><i class='bx bx-paper-plane'></i> | Submit</button>
+							</div>
+						</div>
+
+						<div class="modal" id="modal-edit">
+							<div class="modal-content">
+								<div class="modal-header">
+									<h2>Modal Edit</h2>
+									<span class="modal-close"><i class='bx bxs-x-circle'></i></span>
+								</div>
+								<div class="modal-body">
+									<form action="">
+										<div class="input">
+											<span>Name</span>
+											<input type="text" name="" placeholder="Input your name" autocomplete="off">
+										</div>
+										<div class="input">
+											<span>Email</span>
+											<input type="text" name="" placeholder="example@mail.com" autocomplete="off">
+										</div>
+										<div class="input">
+											<label>Picture</label>
+											<input type="file" name="">
+										</div>
+									</form>
+								</div>
+								<button class="action info"><i class='bx bx-paper-plane'></i> | Submit</button>
+							</div>
+						</div>
+
+						<div class="modal" id="modal-delete">
+							<div class="modal-content" id="modal-content">
+								<div class="modal-header">
+									<h2>Confirm</h2>
+									<span class="modal-close"><i class='bx bxs-x-circle'></i></span>
+								</div>
+								<div class="modal-body">
+									<span>
+										<p>Are you sure want to delete?</p>
+									</span>
+								</div>
+								<button class="action danger"><i class='bx bx-trash-alt'></i> | Yes</button>
+								<button class="modal-close del"><i class='bx bxs-x-circle'></i> | No</button>
+							</div>
+						</div>
+					<!-- end modal -->
+					</div>
+				</div>
+			</div>
+		</main>
+		<!-- MAIN -->
+	</section>
+	<!-- CONTENT -->
+	
+	<script src="https://cdn.jsdelivr.net/npm/apexcharts"></script>
+	<script src="assets/js/jquery-3.5.1.js"></script>
+	<script src="assets/js/jquery.dataTables.min.js"></script>
+	<script src="assets/js/script.js"></script>
+</body>
+</html>
